@@ -7,16 +7,16 @@ function checkoutData() {
     document.getElementById("Welcome").innerText=`hello, ${user}`;
 
     let apple = parseFloat(PARAMS.get("apple"));
-    document.getElementById("apple").innerText=`Your total is ${apple}`;
+    document.getElementById("apple").innerText
 
     let orange = parseFloat(PARAMS.get("orange"));
-    document.getElementById("orange").innerText=`Your total is ${orange}`;
+    document.getElementById("orange").innerText
 
     let milk = parseFloat(PARAMS.get("milk"));
-    document.getElementById("milk").innerText=`Your total is ${milk}`;
+    document.getElementById("milk").innerText
 
     let chicken = parseFloat(PARAMS.get("chicken"));
-    document.getElementById("chicken").innerText=`Your total is ${chicken}`;
+    document.getElementById("chicken").innerText
 
     let result = apple + orange + milk + chicken;
     document.getElementById("result").innerText = `Your total items is ${result}`;
@@ -24,7 +24,16 @@ function checkoutData() {
     let credit = parseFloat(PARAMS.get("credit"));
     document.getElementById("credit").innerText=`Your money is ${credit}`;
 
-    let balance = result - credit;
-    document.getElementById("balance").innerText = `Your Final total is ${balance}`;
+    let balance = credit - result;
+
+    if (balance >= credit){
+        output = result;
+    }
+    else{
+        output = "you cannot afford this";
+    }
+
+        document.getElementById("balance").innerText = `Your change is ${balance}`;
+
 
 }
