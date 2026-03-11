@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> List of Items </title>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="tony">
+
+</head>
+
+    <body>
+     <form name="index-page" action="checkout.html"onsubmit="return validateUser()">
+         <label for="user"> name:</label>
+         <input type="text" name="user" id="user" required>
+
+         <br><br>
+
+         <h3>Please pick anything that you want to buy</h3>
+
+         <label for="apple"> Apple (1$):</label>
+         <input type="number" name="apple" id="apple" min="0" step="1" required>
+         <br><br>
+
+         <label for="orange">Orange(1$):</label>
+         <input type="number" name="orange" id="orange" min="0" step="1" required>
+         <br><br>
+
+         <label for="milk">Milk(2$):</label>
+         <input type="number" name="milk" id="milk" min="0" step="1" required>
+         <br><br>
+
+         <label for="chicken"> Chicken(3$):</label>
+         <input type="number" name="chicken" id="chicken" min="0"step="1" required>
+         <br><br>
+
+         <label for="credit"> Money:</label>
+         <input type="number" name="credit" id="credit" min="0"step="1" required>
+         <br><br>
+
+
+
+         <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+
+     <script src="index.js"></script>
+    </body>
+
+</html>
