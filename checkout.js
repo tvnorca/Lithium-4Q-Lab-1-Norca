@@ -30,10 +30,11 @@ function checkoutData() {
         output = result;
     }
     else{
-        output = "you cannot afford this";
+        alert ("you cannot afford this");
     }
 
         document.getElementById("balance").innerText = `Your change is ${balance}`;
 
 
 }
+
